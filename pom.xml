@@ -32,6 +32,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
@@ -67,5 +72,12 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>mvnrep</id>
+            <name>mvnrepose</name>
+            <url>http://mvnrepository.com/artifact/</url>
+        </repository>
 
+    </repositories>
 </project>

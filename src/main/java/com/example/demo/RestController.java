@@ -13,7 +13,7 @@ public class RestController {
 
 
     @RequestMapping(value = "add",method = RequestMethod.GET)
-    public String add(){
-        return restTemplate.getForEntity("http://FASTSERVER/add?a=10&b=3", String.class).getBody();
+    public String add(int a,int b){
+        return restTemplate.getForEntity("http://FASTSERVER/add?a="+a +"&b="+b, String.class).getBody();
     }
 }
