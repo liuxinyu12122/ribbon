@@ -11,9 +11,17 @@ public class RestController {
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    FeighInter feighInter;
+
+//    @RequestMapping(value = "add",method = RequestMethod.GET)
+//    public String add(int a,int b){
+//        return restTemplate.getForEntity("http://FASTSERVER/add?a="+a +"&b="+b, String.class).getBody();
+//    }
 
     @RequestMapping(value = "add",method = RequestMethod.GET)
     public String add(int a,int b){
-        return restTemplate.getForEntity("http://FASTSERVER/add?a="+a +"&b="+b, String.class).getBody();
+        return String.valueOf(feighInter.add(a, b));
     }
+
 }
